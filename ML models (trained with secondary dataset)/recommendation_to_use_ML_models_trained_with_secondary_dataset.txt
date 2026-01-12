@@ -1,0 +1,38 @@
+Models------------------------------
+
+catboost_model.pkl, decision_tree_model.pkl, gradient_boosting_model.pkl, logistic_regression_model.pkl,
+random_forest_model.pkl, support_vector_machine_model.pkl and xgboost_model.pkl
+
+To use model files----------------------
+
+1. Must have to follow the input variable sequence.
+2. Categorical features must be one-hot encoded and numerical must be standardized.
+3. Enjoy...
+
+"Input variable sequence".....................
+
+1. Age = numerical (int)
+2. Gender = categorical (male/female)
+3. Marital_Status = categorical (single/married/divorced)
+4. Department = categorical
+5. Job_Role = categorical
+6. Job_Level =  = Likert scale(1-5)
+7. Monthly_Income = numerical (int)
+8. Hourly_Rate = numerical (int)
+9.  Years_at_Company = numerical (int)
+10. Years_in_Current_Role = numerical (int)
+11. Years_Since_Last_Promotion = numerical (int)
+12. Work_Life_Balance = Likert scale(1-5)
+13. Job_Satisfaction = Likert scale(1-5)
+14. Performance_Rating = Likert scale(1-5)
+15. Training_Hours_Last_Year = numerical (int)
+16. Overtime = categorical (yes/no)
+17. Project_Count = numerical (int)
+19. Average_Hours_Worked_Per_Week = numerical (int)
+20. Absenteeism_count = numerical (int)
+21. Work_Environment_Satisfaction = Likert scale(1-5)
+22. Relationship_with_Manager = Likert scale(1-4)
+23. Job_Involvement = Likert scale(1-5)
+24. Distance_From_Home = numerical (int)
+25. Number_of_Companies_Worked = numerical (int)
+
