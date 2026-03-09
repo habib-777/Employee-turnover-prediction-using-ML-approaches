@@ -3,52 +3,42 @@
 
 In this research, a machine-learning framework was developed for employee turnover prediction. comparing nine machine learning algorithms (Random Forest, Decision Tree, XGBoost, Gradient Boosting, Support Vector Machine, Logistic Regression, CatBoost, Gaussian Naïve Bayes and K-Nearest Neighbour) on structured HR data.
 
-Two data sources were used, a primary dataset collected through surveys from 24 employees and secondary dataset from Kaggle (https://www.kaggle.com/datasets/ziya07/employee-attrition-prediction-dataset) dataset comprising over 10,000 records. Key variables included job satisfaction, monthly income, tenure and work-life balance. Categorical variables were one-hot encoded, numerical features standardized and class imbalance addressed with SMOTE resampling.
+Two data sources were used, a primary dataset collected through surveys from 24 employees and secondary dataset from Kaggle (https://www.kaggle.com/datasets/ziya07/employee-attrition-prediction-dataset) comprising over 10,000 records. Key variables included job satisfaction, monthly income, tenure and work-life balance. Categorical variables were one-hot encoded, numerical features standardized and class imbalance addressed with SMOTE resampling.
 
 .
 
 ### Exploratory Data Analysis (EDA)
-EDA was conducted to identify trends and relationship between features. Here are the some EDA graphs based on the research.
+EDA was conducted to identify trends and relationship between features. The analysis revealed higher turnover among early career employees (within first 2 years of employment) where 'Low compensation and lack of career growth' were major factors. Employees with 'poor work-life balance' were likely to leave.
 <p align="center">
-  <img src="employee turniver rate" width="300" height="300">
+  <img src="images/s_turnover.png" width="400" height="300"><br>
 </p>
 
-It indicates class impbalance which later solved by SMOTE resampling.
-
-<table>
-<tr>
-<td align="center">
-<img src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" width="250" height="250"><br>
-(a) Input
-</td>
-
-<td align="center">
-<img src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" width="250" height="250"><br>
-(b) Prediction
-</td>
-
-<td align="center">
-<img src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" width="250" height="250"><br>
-(c) Ground Truth
-</td>
-</tr>
-</table>
+The dataset shows a class imbalance, where the majority of the employees stay while a smaller portion leave. To address this issue SMOTE (Synthetic Minority Oversampling Technique) has been used. The following graphs shows a partial exploratory data analysis.
 
 <p align="center">
-  <img src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" width="250" height="250"/>
-  <img src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" width="250" height="250"/>
-  <img src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" width="250" height="250"/>
+  <img src="images/s_turnoverbyDepartment.png" width="350" height="300"/>
+  <img src="images/s_turnoverbyJobRole.png" width="350" height="300"/><br>
+  <img src="images/s_turnoverbyAge.png" width="350" height="300"/>
+  <img src="images/s_turnoverbyworkingYears.png" width="350" height="300"/><br>
+  <img src="images/s_turnoverbyWorklifebalance.png" width="350" height="300"/>
+  <img src="images/s_turnoverbyPerformance.png" width="350" height="300"/>
 </p>
 
 <p align="center">
-  <em>(a) Input &nbsp;&nbsp;&nbsp; (b) Prediction &nbsp;&nbsp;&nbsp; (c) Ground Truth</em>
+  <em> &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; </em>
 </p>
 
-.
+
 
 ### Machine Learning algorithm anlysis
 
-Comparision of classifiers (train with secondary data) in different matrices (after Tuning)
+Nine machine learning algorithms (Random Forest, Decision Tree, XGBoost, Gradient Boosting, Support Vector Machine, Logistic Regression, CatBoost, Gaussian Naïve Bayes and K-Nearest Neighbour) were implemented and compared. Several preprocessing steps were applied before modeling training such as irrelevent features removal, checked for missing values and so on. Categorical variables were encoded usimg "One-Hot Encoding".
+
+Models were evaluated using multiple (Accuracy, Precision, Recall, F1 Score, ROC-AUC) matrics. Hyperparameter tuning was conducted to achieve effective machine learning performance. The following tables shows the evaluted result for each machine learning algorithms.
+
+<p align="center">
+<em>Comparision of classifiers (train with secondary data) in different matrices (after Tuning)</em>
+</p>
 
 <table align="center">
 <tr align="center">
@@ -125,7 +115,9 @@ Comparision of classifiers (train with secondary data) in different matrices (af
 </tr>
 </table>
 
-Comparision of classifiers (train with primary data) in different matrices (after Tuning)
+<p align="center">
+<em>Comparision of classifiers (train with primary data) in different matrices (after Tuning)</em>
+</p>
 
 <table align="center">
 <tr align="center">
