@@ -31,9 +31,9 @@ The dataset shows a class imbalance, where the majority of the employees stay wh
 
 ### Machine Learning algorithm anlysis
 
-Nine machine learning algorithms (Random Forest, Decision Tree, XGBoost, Gradient Boosting, Support Vector Machine, Logistic Regression, CatBoost, Gaussian Naïve Bayes and K-Nearest Neighbour) were implemented and compared. Several preprocessing steps were applied before modeling training such as irrelevent features removal, checked for missing values and so on. Categorical variables were encoded usimg "One-Hot Encoding".
+Nine machine learning algorithms (Random Forest, Decision Tree, XGBoost, Gradient Boosting, Support Vector Machine, Logistic Regression, CatBoost, Gaussian Naïve Bayes and K-Nearest Neighbour) were implemented and compared. Several preprocessing steps were applied before model training such as irrelevent features removal, checked for missing values and so on. Categorical variables were encoded usimg "One-Hot Encoding".
 
-Models were evaluated using multiple (Accuracy, Precision, Recall, F1 Score, ROC-AUC) matrics. Hyperparameter tuning was conducted to achieve effective machine learning performance. The following tables shows the evaluted result for each machine learning algorithms.
+Models were evaluated using multiple (Accuracy, Precision, Recall, F1 Score, ROC-AUC) matrics. Hyperparameter tuning was conducted to achieve effective machine learning performance. The following tables shows the evaluated result for each machine learning algorithms.
 
 <p align="center">
 <em>Comparision of classifiers (train with secondary data) in different matrices (after Tuning)</em>
@@ -166,7 +166,9 @@ Models were evaluated using multiple (Accuracy, Precision, Recall, F1 Score, ROC
 </tr>  
 </table>
 
-According to the model performance shown in first table (secondary data), the Random Forest model had the highest precision (1.00), meaning all predicted leavers were actual leavers, but its recall (0.74) implied it missed a notable number of cases. CatBoost offered the best balance (precision = 0.97, recall = 0.79). Gradient Boosting, XGBoost and SVM had moderately higher precision and lower recall, indicating more false positives and accurate true positives. Besides, SVM has the highest ROC AUC (0.99) among all the classifiers. The decision tree has the lowest balanced performance, and the performance of the Logistic regression was not acceptable, and the accuracy and precision were 0.55, and recall and ROC-AUC was 0.56. In model performance (second table) with primary data, both Gaussian Naïve Bayes and KNN have a similar performance though ROC-AUC of KNN has ignorable increase. As the primary dataset is very small, the trained model wast not performed well.
+According to the model performance shown in first table (secondary data), the Random Forest model had the highest precision (1.00), meaning that all predicted leavers were actual leavers, however, its recall (0.74) indicates that it missed a notable number of cases. CatBoost offered the best balance (precision = 0.97, recall = 0.79). Gradient Boosting, XGBoost and SVM showed moderately high precision and lower recall, indicating more false positives and accurate true positives. Besides, SVM achieved the highest ROC AUC (0.99) among all the classifiers. The decision tree had the lowest balanced performance, while the performance of the Logistic regression was not acceptable, with accuracy and precision at 0.55, and recall and ROC-AUC at 0.56. 
+
+In model performance results (second table) using primary data, both Gaussian Naïve Bayes and KNN showed similar performance, although KNN had a slightly higher ROC-AUC. As the primary dataset is very small, the trained model did not performed well.
 
 Overall, Random Forest and SVM stand out for its precision and ROC performance, Decision tree, XGBoost and Gradient Boosting for their overall balance, and CatBoost for better recall in detecting at-risk employees. The choice among them should be guided by organisational priorities: whether the goal is to minimise false alarms (Random Forest/SVM), capture most attrition cases with some risk of false positives (CatBoost), or balance both outcomes effectively (Decision tree, XGBoost or Gradient Boosting). 
 
@@ -178,7 +180,9 @@ Overall, Random Forest and SVM stand out for its precision and ROC performance, 
 
 ### Feature Importance
 
-After training all classifiers on the pre-processed data, an importance-feature extraction workflow has been implemented to extract influential features. Across all seven models, the most influential predictors were: Overtime, gender, marital status, job role, job satisfaction, monthly income, job involvement, job level, project count, department (IT), years in current role, work environment satisfaction, number of companies worked, promotion, work life balance, performance rating, hourly rate, training hours, years at company, absenteeism, average working hours, age and relationship with manager. Top influential features for CatBoost, Random Forest, Support Vector Machine (SVM) and Gradient Boosting algorithms has been shown in the following graphs.
+After training all classifiers on the pre-processed data, a feature-importance extraction workflow was implemented to extract influential features. Across all seven models, the most influential predictors were: Overtime, gender, marital status, job role, job satisfaction, monthly income, job involvement, job level, project count, department (IT), years in current role, work environment satisfaction, number of companies worked, promotion, work life balance, performance rating, hourly rate, training hours, years at company, absenteeism, average working hours, age and relationship with manager. 
+
+Top influential features for CatBoost, Random Forest, Support Vector Machine (SVM) and Gradient Boosting algorithms has been shown in the following graphs.
 
 
 <p align="center">
@@ -189,19 +193,4 @@ After training all classifiers on the pre-processed data, an importance-feature 
 </p>
 
 
-
-
-
-now 
-
-<figure>
-  <img src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" width="600">
-  <figcaption>Figure 1: Model architecture</figcaption>
-  <img src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" width="600">
-  <figcaption>Figure 2: Model architecture</figcaption>
-</figure>
-
-<p align="center">
-    <img width="800" src="https://github.com/habib-777/AgriFarm/blob/main/Screenshots/AgriFarm.png" alt="Home page">
-</p>
 
